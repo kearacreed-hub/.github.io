@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Keara Creed-Bussey - Digital Learning Wizard, Interactive Content Creator & Experience Design Enthusiast. Portfolio showcasing eLearning projects and experience." />
+    <meta name="keywords" content="eLearning, Instructional Design, Digital Learning, Articulate, LMS, Learning Experience Design" />
+    <meta name="author" content="Keara Creed-Bussey" />
+    
+    <title>KEARA CREED-BUSSEY | Digital Learning Portfolio</title>
+
+    <!-- Favicon - Add your favicon.ico to the root directory -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Google Fonts - Optimized -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Global Styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: "Space Mono", monospace;
+        margin: 0;
+        padding: 0;
+      }
+      
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      /* Banner Section */
+      #banner {
+        background: url("./assets/img/banner.jpg") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+      }
+      
+      .banner {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Preloader */
+      .preloader {
+        background-color: #c6a289;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+
+      .preloader.hide {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loader {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Mobile Menu */
+      @media screen and (max-width: 767px) {
+        .menu_items {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          display: none;
+          opacity: 0;
+          transform: scale(1.1);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          z-index: 1000;
+        }
+
+        .menu_items.show {
+          display: flex;
+        }
+
+        .menu_items.animate-in {
+          opacity: 1;
+          transform: scale(1);
+          pointer-events: auto;
+        }
+
+        .menu_items.animate-out {
+          opacity: 0;
+          transform: scale(1.1);
+          pointer-events: none;
+        }
+
+        li, p {
+          font-size: 14px;
+        }
+      }
+
+      /* Smooth Transitions */
+      a, button {
+        transition: all 0.3s ease;
+      }
+
+      /* Image Hover Effects */
+      .project-img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-img:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Section Title Underline Animation */
+      .section-title-line {
+        width: 70px;
+        height: 3px;
+        background: #C6A289;
+        margin-left: 1rem;
+        transition: width 0.3s ease;
+      }
+
+      .section-title:hover .section-title-line {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="flex flex-col justify-between min-h-screen">
+      <!-- Navbar -->
+      <nav class="bg-[#C6A289] text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between py-0 md:py-4">
+          <a href="#" class="py-4 pl-4 md:pl-0 font-bold text-xl hover:opacity-80 transition">
+            KEARA CREED-BUSSEY
+          </a>
+          <button 
+            class="md:hidden pr-4 pt-2 cursor-pointer focus:outline-none" 
+            id="menu_open"
+            aria-label="Open menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+          <div class="menu_items absolute md:static md:flex flex-col md:flex-row bg-[#C6A289] md:bg-transparent text-white py-12 md:py-0 md:items-center h-screen md:h-auto w-full md:w-auto justify-center text-2xl md:text-base">
+            <button 
+              class="block md:hidden mx-auto w-[40px] h-[40px] mb-12 text-center cursor-pointer focus:outline-none" 
+              id="menu_close"
+              aria-label="Close menu"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+            </button>
+            <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+              <a href="#" class="hover:opacity-80 transition">Home</a>
+              <a href="#about" class="hover:opacity-80 transition">About</a>
+              <a href="#experience" class="hover:opacity-80 transition">Experience</a>
+              <a href="#projects" class="hover:opacity-80 transition">Projects</a>
+              <a href="#contact" class="hover:opacity-80 transition">Contact</a>
+              <a 
+                href="https://www.linkedin.com/in/keara-creed-bussey-aa813325/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn Profile" 
+                class="hover:opacity-80 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Banner -->
+        <section id="banner" class="bg-amber-300">
+          <div class="container py-32 mx-auto px-4">
+            <div class="banner w-[320px] lg:w-[650px] mx-auto px-6 py-12 text-center font-semibold">
+              <p class="text-md lg:text-xl mb-4">Hello, I'm</p>
+              <h1 class="text-xl lg:text-5xl mb-6 font-bold">KEARA CREED-BUSSEY</h1>
+              <p class="text-sm lg:text-base">Digital Learning Wizard | Interactive Content Creator | Experience Design Enthusiast</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-20">
+          <div class="container mx-auto flex flex-col lg:flex-row gap-6 lg:gap-12 items-start px-4">
+            <div class="w-full lg:w-2/5">
+              <img src="./assets/img/profile.jpeg" alt="Keara Creed-Bussey" class="w-full rounded-lg shadow-lg" />
+            </div>
+            <div class="w-full lg:w-3/5">
+              <div class="flex items-center mb-8 section-title">
+                <h2 class="text-2xl lg:text-4xl uppercase tracking-[5px] font-bold text-[#C6A289]">About Me</h2>
+                <div class="section-title-line"></div>
+              </div>
+              <p class="mb-4">I transform complex training challenges into engaging, human-centered digital journeys. With 5+ years of experience in eLearning, I blend technology, creativity, and design thinking to craft learning experiences people actually want to engage with.</p>
+              <p class="mb-4">Whether it's building immersive modules in Articulate, editing dynamic content in Adobe CC, or simplifying workflows in Microsoft 365, I thrive on turning big ideas into interactive, impactful learning. My superpower? Translating complex topics into bite-sized, compelling digital content that makes learning stick.</p>
+              <p class="mb-4">From revamping LMS platforms to designing multimedia-rich courses, I've partnered with organisations like the NHS and Unite Students, delivering scalable solutions that drive results.</p>
+              <div class="mt-6 p-4 bg-amber-50 rounded-lg">
+                <p class="text-lg font-semibold mb-2">📍 Based in Cardiff | 🌐 Working with teams nationwide</p>
+                <p>Let's connect and create learning that's not just effective—but unforgettable.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="bg-gray-50 py-20">
+          <div class="container mx-auto px-4">
+            <div class="flex items-center mb-8 section-title">
+              <h2 class="text-2xl lg:text-4xl uppercase tracking-[5px] font-bold text-[#C6A289]">Experience</h2>
+              <div class="section-title-line"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
+              <!-- Experience Card 1 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">Instructional Designer (Freelance)</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">May 2025 — present</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Maestro</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Writing outlines, storyboards, and scripts for various learning experiences, including eLearning and trainer lead presentations</li>
+                  <li>Taking ownership of tasks and reporting to US-based project team, using proactive communication</li>
+                  <li>Researching and synthesising source materials to create strong content</li>
+                </ul>
+              </article>
+
+              <!-- Experience Card 2 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">Learning Designer</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">Feb 2025 — present</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Unite Students</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Create multimedia content utilising Articulate, Camtasia, and Vyond to build interactive modules</li>
+                  <li>Implementing streamlined quality assurance and testing content workflows that increase team productivity</li>
+                  <li>Partnering with stakeholders to align digital learning initiatives with business objectives</li>
+                </ul>
+              </article>
+
+              <!-- Experience Card 3 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">Learning Developer (Digital)</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">Dec 2023 — Feb 2025</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Cardiff Metropolitan University</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Led digital transformation initiative migrating legacy content to new CMS</li>
+                  <li>Developed automated workflows using M365, reducing content production time by 25%</li>
+                  <li>Collaborated with subject matter experts to produce digital learning resources</li>
+                </ul>
+              </article>
+
+              <!-- Experience Card 4 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">Learning Technologist (FTC)</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">Feb 2023 — Dec 2023</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Health Education and Improvement Wales (NHS Wales)</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Spearheaded LMS implementation project, including content migration and testing</li>
+                  <li>Created standardised content library improving content discoverability</li>
+                  <li>Delivered platform training to 100+ users with 90% adoption rate</li>
+                  <li>Enhanced digital content using Adobe Creative Suite, Articulate, and iSpring</li>
+                </ul>
+              </article>
+
+              <!-- Experience Card 5 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">eLearning Development Officer</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">Jan 2022 — Feb 2023</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Macmillan Cancer Support</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Developed copy for Fuse LMS and staff platform using correct tone of voice</li>
+                  <li>Designed branded training assets using PowerPoint and Adobe Creative Suite</li>
+                  <li>Led UX testing and quality assurance procedures</li>
+                  <li>Worked with stakeholders to develop engaging learning for 15,000+ monthly visitors</li>
+                </ul>
+              </article>
+
+              <!-- Experience Card 6 -->
+              <article class="p-6 shadow-md border-l-8 border-[#C6A289] rounded bg-white hover:shadow-lg transition">
+                <h3 class="text-md lg:text-lg font-semibold">Digital Programmes Manager</h3>
+                <p class="font-normal text-sm text-gray-600 mb-2">March 2020 — Jan 2022</p>
+                <h4 class="text-md lg:text-lg font-semibold mb-4 text-[#C6A289]">Young Enterprise</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                  <li>Spearheaded multiple digital projects, including development of LMS</li>
+                  <li>Managed project timelines and collaborated with external suppliers</li>
+                  <li>Developed and managed project roadmaps, timelines, and risk registers</li>
+                  <li>Ensured timely delivery of digital resources while maintaining high standards</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20">
+          <div class="container mx-auto px-4">
+            <div class="flex items-center mb-8 section-title">
+              <h2 class="text-2xl lg:text-4xl uppercase tracking-[5px] font-bold text-[#C6A289]">Projects</h2>
+              <div class="section-title-line"></div>
+            </div>
+
+            <!-- Modern Slavery Project -->
+            <div class="mb-16">
+              <h3 class="text-lg lg:text-2xl font-semibold mb-4">Modern Slavery</h3>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./assets/img/MODERN SLAVERY 1.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 1.png" alt="Modern Slavery Project Screenshot 1" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 2.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 2.png" alt="Modern Slavery Project Screenshot 2" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 3.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 3.png" alt="Modern Slavery Project Screenshot 3" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 3.1.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 3.1.png" alt="Modern Slavery Project Screenshot 4" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 5.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 5.png" alt="Modern Slavery Project Screenshot 5" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 8.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 8.png" alt="Modern Slavery Project Screenshot 6" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY  4.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY  4.png" alt="Modern Slavery Project Screenshot 7" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY 9.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY 9.png" alt="Modern Slavery Project Screenshot 8" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY.png" alt="Modern Slavery Project Screenshot 9" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/MODERN SLAVERY7.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/MODERN SLAVERY7.png" alt="Modern Slavery Project Screenshot 10" class="w-full h-auto" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Student Heating System Project -->
+            <div class="mb-16">
+              <h3 class="text-lg lg:text-2xl font-semibold mb-4">Student Heating System</h3>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./assets/img/PREFECT MAIN.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT MAIN.png" alt="Student Heating System Screenshot 1" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 1.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 1.png" alt="Student Heating System Screenshot 2" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 2.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 2.png" alt="Student Heating System Screenshot 3" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 4.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 4.png" alt="Student Heating System Screenshot 4" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 5.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 5.png" alt="Student Heating System Screenshot 5" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 6.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 6.png" alt="Student Heating System Screenshot 6" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/PREFECT 8.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/PREFECT 8.png" alt="Student Heating System Screenshot 7" class="w-full h-auto" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Salesforce Project -->
+            <div class="mb-16">
+              <h3 class="text-lg lg:text-2xl font-semibold mb-4">Salesforce</h3>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./assets/img/salesforce 1.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 1.png" alt="Salesforce Project Screenshot 1" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 2.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 2.png" alt="Salesforce Project Screenshot 2" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 4.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 4.png" alt="Salesforce Project Screenshot 3" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 9.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 9.png" alt="Salesforce Project Screenshot 4" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 5.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 5.png" alt="Salesforce Project Screenshot 5" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce.png" alt="Salesforce Project Screenshot 6" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 6.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 6.png" alt="Salesforce Project Screenshot 7" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 7.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 7.png" alt="Salesforce Project Screenshot 8" class="w-full h-auto" />
+                </a>
+                <a href="./assets/img/salesforce 8.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/salesforce 8.png" alt="Salesforce Project Screenshot 9" class="w-full h-auto" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Personal Academic Tutoring Project -->
+            <div class="mb-16">
+              <h3 class="text-lg lg:text-2xl font-semibold mb-4">Personal Academic Tutoring</h3>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./assets/img/msedge_qND4E07sdV.png" class="border-4 shadow rounded project-img overflow-hidden">
+                  <img src="./assets/img/msedge_qND4E07sdV.png" alt="Personal Academic Tutoring Screenshot 1" class="w-full h-auto"
