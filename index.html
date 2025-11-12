@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEARA CREED-BUSSEY</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- slick cdns -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/input.css" />
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- page content -->
+    <div class="page_content flex flex-col justify-between min-h-screen">
+      <!-- navbar -->
+      <nav class="bg-[#C6A289] text-white overflow-hidden">
+        <div>
+          <div class="container mx-auto flex justify-between py-0 md:py-4">
+            <a href="#" class="py-4 pl-4 md:pl-0 font-bold text-xl"
+              >KEARA CREED-BUSSEY</a
+            >
+            <span class="md:hidden pr-4 pt-2 cursor-pointer" id="menu_open">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            </span>
+            <div
+              class="menu_items absolute md:static md:flex flex-col md:flex-row bg-[#C6A289] md:bg-transparent text-white md:text-white py-12 md:py-0 md:items-center h-screen md:h-auto z-40 w-full md:w-auto justify-center text-2xl md:text-base"
+            >
+              <div
+                class="block md:hidden mx-auto w-[40px] h-[40px] mb-12 text-center cursor-pointer"
+                id="menu_close"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                  />
+                </svg>
+              </div>
+              <div class="flex flex-col md:flex-row items-center gap-4">
+                <a href="#">Home</a>
+                <a href="#about">About </a>
+                <a href="#experience">Experience </a>
+                <a href="#projects">Projects </a>
+                <a href="#contact">Contact </a>
+                <a
+                  href="https://www.linkedin.com/in/keara-creed-bussey-aa813325/"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="currentColor"
+                    class="bi bi-linkedin"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- /navbar -->
+
+      <main>
+        <!-- banner -->
+        <div id="banner" class="bg-amber-300">
+          <div class="container py-32 mx-auto px-4">
+            <div
+              class="banner w-[320px] lg:w-[650px] mx-auto px-6 py-12 text-center font-semibold"
+            >
+              <h5 class="text-md lg:text-xl mb-4">Hello, I'm</h5>
+              <h2 class="text-xl lg:text-5xl mb-6">KEARA CREED-BUSSEY</h2>
+              <p>
+                Digital Learning Wizard | Interactive Content Creator |
+                Experience Design Enthusiast
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /banner -->
+
+        <!-- about -->
+
+        <div id="about" class="">
+          <div
+            class="container py-20 mx-auto flex flex-col lg:flex-row gap-6 items-start px-4"
+          >
+            <div class="w-full lg:w-2/5">
+              <img
+                src="./assets/img/profile.webp"
+                alt="Keara"
+                class="w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full lg:w-3/5">
+              <!-- title -->
+              <div class="flex items-center mb-8">
+                <h4
+                  class="text-2xl lg:text-4xl uppercase latter-space-2 tracking-[5px] font-bold text-[#C6A289]"
+                >
+                  About Me
+                </h4>
+                <div class="w-[70px] h-[3px] bg-[#C6A289]"></div>
+              </div>
+              <p>
+                I design learning experiences that spark curiosity and bring a
+                little magic back into learning! With over five years in digital
+                learning, I specialise in transforming complex training content
+                into interactive, human-centred journeys that inspire real
+                behaviour change.
+              </p>
+              <p class="my-4">
+                Using tools like Articulate, Synthesia, Biteable and the Adobe
+                Creative Cloud, I build immersive modules that blend motion,
+                narrative, and accessibility. From scenario-based learning and
+                branching simulations to video-driven storytelling, I focus on
+                creating experiences learners remember and apply.
+              </p>
+              <p>
+                I've collaborated with organisations such as the NHS Wales,
+                Maestro and EDF to craft scalable, multimedia-rich courses and
+                streamline LMS delivery- always with the goal of making learning
+                more engaging, intuitive, and impactful.
+              </p>
+              <div class="mt-4">
+                <p class="text-md md:text-lg lg:text-xl font-[500]">
+                  📍 Based in Cardiff | 🌐 Working with teams nationwide
+                </p>
+
+                <p>
+                  Let’s connect and create learning that’s not just
+                  effective—but unforgettable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /about -->
+
+        <!-- experience -->
+
+        <div id="experience" class="">
+          <div class="container py-20 mx-auto px-4">
+            <!-- title -->
+            <div class="flex items-center mb-8">
+              <h4
+                class="text-2xl lg:text-4xl uppercase latter-space-2 tracking-[5px] font-bold text-[#C6A289]"
+              >
+                experience
+              </h4>
+              <div class="w-[70px] h-[3px] bg-[#C6A289]"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  Learning Designer
+                </h4>
+                <span class="font-normal text-sm">July 2025 – present</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">EDF</h4>
+
+                <li>
+                  Writing outlines, storyboards, and scripts, keeping to
+                  brand/tone-of-voice
+                </li>
+                <li>
+                  Designing inspiring learning experiences using Articulate,
+                  Adobe applications and media software such as Synthesia
+                </li>
+                <li>
+                  Researching and synthesising source materials to create strong
+                  content alongside SMEs based in the Nuclear sector of EDF.
+                </li>
+              </div>
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  Instructional Designer (Freelance)
+                </h4>
+                <span class="font-normal text-sm">May 2025 – present</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">Maestro</h4>
+
+                <li>
+                  Writing outlines, storyboards, and scripts for various
+                  learning experiences, including eLearning and trainer lead
+                  presentations
+                </li>
+                <li>
+                  Taking ownership of tasks and reporting to USbased project
+                  team, using proactive communication
+                </li>
+                <li>
+                  Researching and synthesising source materials to create strong
+                  content.
+                </li>
+              </div>
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  Learning Designer
+                </h4>
+                <span class="font-normal text-sm">Feb 2025 – present</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">
+                  Unite Students
+                </h4>
+
+                <li>
+                  Create multimedia content utilising Articulate, Camtasia, and
+                  Vyond to build interactive
+                </li>
+                <li>
+                  Implementing streamlined quality assurance and testing content
+                  workflows that increase team productivity while maintaining
+                  quality standards
+                </li>
+                <li>
+                  Partnering with stakeholders to align digital learning
+                  initiatives with business objectives.
+                </li>
+              </div>
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  Learning Developer (Digital)
+                </h4>
+                <span class="font-normal text-sm">Dec 2023 – Feb 2025</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">
+                  Cardiff Metropolitan University
+                </h4>
+
+                <li>
+                  Led digital transformation initiative migrating legacy content
+                  to new CMS, improving user experience and platform performance
+                </li>
+                <li>
+                  Developed automated workflows using M365, reducing content
+                  production time by 25%
+                </li>
+                <li>
+                  Collaborated with subject matter experts (including
+                  international experts) to produce digital learning resources
+                  utiliSing Adapt, Articulate, and Bootstrap.
+                </li>
+              </div>
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  Learning Technologist (FTC)
+                </h4>
+                <span class="font-normal text-sm">Feb 2023 - Dec 2023</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">
+                  Health Education and Improvement Wales (NHS Wales)
+                </h4>
+
+                <li>
+                  Spearheaded LMS implementation project, including content
+                  migration, testing, and quality assurance
+                </li>
+                <li>
+                  Created standardised content library and version control
+                  system that improved content discoverability
+                </li>
+                <li>
+                  Delivered platform training to over 100 users, resulting in
+                  90% adoption rate within first month
+                </li>
+                <li>
+                  Developed user support materials that reduced help desk
+                  enquiries by 40%
+                </li>
+                <li>
+                  Enhanced digital content using Adobe Creative Suite,
+                  Articulate, and iSpring.
+                </li>
+              </div>
+              <!-- item -->
+              <div
+                class="p-4 shadow-md border-l-8 border-[#C6A289] rounded"
+                tabindex="0"
+              >
+                <h4 class="text-md lg:text-lg font-semibold">
+                  eLearning Development Officer
+                </h4>
+                <span class="font-normal text-sm">Jan 2022 – Feb 2023</span>
+
+                <h4 class="text-md lg:text-lg font-semibold mb-6">
+                  Macmillan Cancer Support
+                </h4>
+
+                <li>
+                  Developed copy for Fuse LMS and staff platform using correct
+                  tone of voice
+                </li>
+                <li>
+                  Designed branded training assets using tools such as
+                  PowerPoint and Adobe Creative Suite
+                </li>
+                <li>Developed eLearning using Evolve software</li>
+                <li>Led on UX testing and quality assurance procedures</li>
+                <li>
+                  Worked closely with internal stakeholders to develop engaging
+                  learning for over 15000 monthly visitors.
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- /experience -->
+
+        <!-- projects -->
+
+        <div id="projects" class="">
+          <div class="container py-20 mx-auto px-4">
+            <!-- title -->
+            <div class="flex items-center mb-8">
+              <h4
+                class="text-2xl lg:text-4xl uppercase latter-space-2 tracking-[5px] font-bold text-[#C6A289]"
+              >
+                projects
+              </h4>
+              <div class="w-[70px] h-[3px] bg-[#C6A289]"></div>
+            </div>
+
+            <!-- projects -->
+            <h5 class="text-lg lg:text-2xl font-semibold mb-4">
+              Modern Slavery
+            </h5>
+            <div>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="./assets/img/MODERN SLAVERY 1.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 1.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY 2.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 2.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY 3.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 3.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY 3.1.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 3.1.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  href="./assets/img/MODERN SLAVERY 5.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 5.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY 8.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 8.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY  4.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY  4.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY 9.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY 9.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="./assets/img/MODERN SLAVERY7.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/MODERN SLAVERY7.webp"
+                    alt="Modern Slavery Training Module Screenshot"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- projects -->
+            <h5 class="text-lg lg:text-2xl font-semibold mb-4 mt-12">
+              Project Management Systems
+            </h5>
+            <div>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="./assets/img/project-management-systems/1.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/1.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/2.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/2.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/3.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/3.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/4.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/4.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/5.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/5.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/6.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/6.webp"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="./assets/img/project-management-systems/7.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img
+                    src="./assets/img/project-management-systems/7.webp"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- projects -->
+            <h5 class="text-lg lg:text-2xl font-semibold mb-4 mt-12">
+              Salesforce
+            </h5>
+            <div>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="./assets/img/salesforce 1.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/salesforce 1.webp" alt="" />
+                </a>
+
+                <a
+                  href="./assets/img/salesforce 2.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/salesforce 2.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/salesforce 4.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 4.webp" alt="" />
+                </a>
+
+                <a
+                  href="./assets/img/salesforce 9.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 9.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/salesforce 5.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 5.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/salesforce.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce.webp" alt="" />
+                </a>
+
+                <a
+                  href="./assets/img/salesforce 6.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 6.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/salesforce 7.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 7.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/salesforce 8.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/salesforce 8.webp" alt="" />
+                </a>
+              </div>
+            </div>
+            <!-- projects -->
+            <h5 class="text-lg lg:text-2xl font-semibold mb-4 mt-12">
+              Pressure Systems
+            </h5>
+            <div>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="./assets/img/pressure-systems/PSSR 1.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/pressure-systems/PSSR 1.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/pressure-systems/PSSR 2.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/pressure-systems/PSSR 2.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/pressure-systems/PSSR 3.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/pressure-systems/PSSR 3.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/pressure-systems/PSSR 4.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/pressure-systems/PSSR 4.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/pressure-systems/PSSR 5.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/pressure-systems/PSSR 5.webp" alt="" />
+                </a>
+              </div>
+            </div>
+            <!-- projects -->
+            <h5 class="text-lg lg:text-2xl font-semibold mb-4 mt-12">
+              Personal Academic Tutoring
+            </h5>
+            <div>
+              <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="./assets/img/msedge_qND4E07sdV.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/msedge_qND4E07sdV.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/msedge_ZQXzEcMyUI.webp"
+                  class="border-4 shadow rounded"
+                >
+                  <img src="./assets/img/msedge_ZQXzEcMyUI.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/msedge_seOPoGFesn.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/msedge_seOPoGFesn.webp" alt="" />
+                </a>
+                <a
+                  href="./assets/img/msedge_5WcvjjPGOu.webp"
+                  class="border-4 rounded shadow"
+                >
+                  <img src="./assets/img/msedge_5WcvjjPGOu.webp" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- /projects -->
+
+        <div id="rmv">
+          <div class="container mx-auto py-20 px-4">
+            <!-- title -->
+            <div class="flex items-center mb-8">
+              <h4
+                class="text-2xl lg:text-4xl uppercase latter-space-2 tracking-[5px] font-bold text-[#C6A289]"
+              >
+                Risk Management Training Video
+              </h4>
+              <div class="w-[70px] h-[3px] bg-[#C6A289]"></div>
+            </div>
+
+            <div class="w-full max-w-6xl mx-auto aspect-video mt-8">
+              <video
+                class="w-full h-full object-cover rounded-lg shadow-lg"
+                controls
+                autoplay="false"
+                muted
+                playsinline
+                preload="metadata"
+                loading="lazy"
+              >
+                <source
+                  src="./assets/video/Diligent Risk Manager. mp4.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact -->
+
+        <div id="contact" class="">
+          <div class="container py-20 mx-auto px-4">
+            <!-- title -->
+            <div class="flex items-center mb-8">
+              <h4
+                class="text-2xl lg:text-4xl uppercase latter-space-2 tracking-[5px] font-bold text-[#C6A289]"
+              >
+                contact
+              </h4>
+              <div class="w-[70px] h-[3px] bg-[#C6A289]"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div class="w-full">
+                <img
+                  src="./assets/img/contact.webp"
+                  alt="pikisuperstar / Freepik"
+                  class="w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="w-full">
+                <h5 class="text-lg lg:text-2xl font-semibold mb-8">
+                  Get In Touch!
+                </h5>
+                <div class="flex gap-4 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="#C6A289"
+                    class="bi bi-geo-alt"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                    />
+                    <path
+                      d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                  <p class="text-md lg:text-lg">Cardiff, South Wales</p>
+                </div>
+                <div class="flex gap-4 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="#C6A289"
+                    class="bi bi-envelope"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                    />
+                  </svg>
+                  <a
+                    href="mailto:kearacreed@gmail.com"
+                    class="text-md lg:text-lg"
+                    >kearacreed@gmail.com</a
+                  >
+                </div>
+                <div class="flex gap-4 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="#C6A289"
+                    class="bi bi-telephone"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                    />
+                  </svg>
+                  <a href="tel:+4407843916839">
+                    <p class="text-md lg:text-lg">+44 07843916839</p>
+                  </a>
+                </div>
+                <div class="flex gap-4 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="#C6A289"
+                    class="bi bi-linkedin"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    />
+                  </svg>
+                  <a
+                    href="https://www.linkedin.com/in/keara-creed-bussey-aa813325/"
+                  >
+                    <p class="text-md lg:text-lg">LinkedIn</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+
+        <!-- /contact -->
+      </main>
+
+      <footer class="bg-[#C6A289] text-white py-12 text-center">
+        <a href="" class="py-4 pl-4 md:pl-0 font-bold text-xl"
+          >KEARA CREED-BUSSEY</a
+        >
+        <p>
+          Copyright © <span id="year"></span>
+          <a href="https://www.fiverr.com/iibbar" class="underline">Developer</a
+          >. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        const pageContent = document.getElementById("pageContent");
+
+        preloader.classList.add("hide");
+        setTimeout(() => {
+          preloader.style.display = "none";
+          pageContent.classList.add("show");
+          // Restore scroll
+          document.documentElement.style.overflow = "";
+          document.documentElement.style.height = "";
+        }, 500); // Match transition duration
+      });
+      const menuOpen = document.getElementById("menu_open");
+      const menuClose = document.getElementById("menu_close");
+      const menuItems = document.querySelector(".menu_items");
+
+      menuOpen.addEventListener("click", () => {
+        menuItems.classList.add("show");
+
+        requestAnimationFrame(() => {
+          menuItems.classList.remove("animate-out");
+          menuItems.classList.add("animate-in");
+        });
+      });
+
+      menuClose.addEventListener("click", () => {
+        menuItems.classList.remove("animate-in");
+        menuItems.classList.add("animate-out");
+
+        setTimeout(() => {
+          menuItems.classList.remove("show");
+        }, 10);
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
