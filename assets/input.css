@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Space Mono", monospace;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#banner {
+  background: url("./img/banner.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.banner {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* Spinner style */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #1a1a1a;
+  border-top: 6px solid #df8235;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.section {
+  transition: all 1.5s ease;
+}
+
+@keyframes spinScale {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-spin-scale {
+  animation: spinScale 0.8s ease-out forwards;
+}
+
+@media screen and (max-width: 767px) {
+  .menu_items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu_items.show {
+    display: flex; /* Now it's visible */
+  }
+
+  .menu_items.animate-in {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  .menu_items.animate-out {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+  }
+
+  li,
+  p {
+    font-size: 14px;
+  }
+}
+
+.preloader {
+  background-color: #c6a289;
+  color: white;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page_content {
+  display: none;
+}
+
+.page_content.show {
+  display: flex;
+}
+
+/* WCAG 2.2 Hover/Focus States */
+/* Navigation Links */
+nav a {
+  transition: all 0.3s ease;
+  position: relative;
+  outline-offset: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  opacity: 0.8;
+  text-decoration: underline;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+nav a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* Project Images */
+#projects a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  display: block;
+  outline-offset: 4px;
+}
+
+#projects a:hover,
+#projects a:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+
+#projects a:focus-visible {
+  outline: 3px solid #c6a289;
+  outline-offset: 4px;
+}
+
+#projects img {
+  transition: transform 0.3s ease;
+}
+
+#projects a:hover img,
+#projects a:focus img {
+  transform: scale(1.02);
+}
+
+/* Contact Links */
+#contact a {
+  transition: color 0.3s ease, transform 0.2s ease;
+  outline-offset: 4px;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #8b7355;
+  transform: translateX(4px);
+}
+
+#contact a:focus-visible {
+  outline: 2px solid #c6a289;
+  outline-offset: 4px;
+}
+
+/* Footer Links */
+footer a {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  outline-offset: 4px;
+}
+
+footer a:hover,
+footer a:focus {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+footer a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* SVG Icons */
+svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover svg,
+a:focus svg {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Menu Toggle Buttons */
+#menu_open,
+#menu_close {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  outline-offset: 4px;
+}
+
+#menu_open:hover,
+#menu_open:focus,
+#menu_close:hover,
+#menu_close:focus {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+#menu_open:focus-visible,
+#menu_close:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* Video Controls */
+video:focus {
+  outline: 3px solid #c6a289;
+  outline-offset: 4px;
+}
+
+/* General Interactive Elements */
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #c6a289;
+  outline-offset: 4px;
+}
+
+/* Ensure all interactive elements have visible focus */
+*:focus {
+  outline: 2px solid #c6a289;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Experience Cards */
+#experience .p-4 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+#experience .p-4:hover,
+#experience .p-4:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(198, 162, 137, 0.3);
+  border-left-color: #8b7355;
+}
+
+#experience .p-4:focus-visible {
+  outline: 3px solid #c6a289;
+  outline-offset: 4px;
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+svg,
+img {
+  transition: all 0.3s ease;
+}
